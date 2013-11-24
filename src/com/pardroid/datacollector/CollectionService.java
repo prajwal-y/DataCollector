@@ -28,16 +28,6 @@ public class CollectionService extends Service {
         mReceiver = new CollectionReceiver();
         registerReceiver(mReceiver, filter);
 	}
-
-    @Override
-    public void onStart(Intent intent, int startId) {
-        boolean screenOn = intent.getBooleanExtra("screen_state", false);
-        if (!screenOn) {
-            // YOUR CODE
-        } else {
-            // YOUR CODE
-        }
-    }
     
     @Override
     public void onDestroy() {

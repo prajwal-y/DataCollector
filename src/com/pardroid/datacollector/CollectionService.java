@@ -28,11 +28,17 @@ public class CollectionService extends Service {
         mReceiver = new CollectionReceiver();
         registerReceiver(mReceiver, filter);
 	}
+	
+	@Override
+	public int onStartCommand(Intent intent, int flags, int startId) {
+	    return Service.START_STICKY;
+	}
     
     @Override
     public void onDestroy() {
     	Log.d(TAG, "Stopping Collection Service");
     	unregisterReceiver(mReceiver);
+    	super.onDestroy();
     }
 
 }

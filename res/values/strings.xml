@@ -7,7 +7,8 @@
     <string name="ENABLE_DATA_COL">Enable Data Collection</string>
     <string name="VIEW_COL_DATA">View Collected Data</string>
     <string name="ON_COUNT">Screen On Count</string>
-    <string name="RESET_COUNT">Reset Count</string>
+    <string name="COL_SINCE">Collecting Since:</string>
     <string name="data_results">Data Results</string>
+    <string name="RESET_COUNT">Reset Count</string>
 
 </resources>

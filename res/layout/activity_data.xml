@@ -6,36 +6,62 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@android:color/background_dark"
     tools:context=".DataActivity" >
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:onClick="resetCount"
+        android:textColor="@android:color/white"
+        android:text="@string/RESET_COUNT" />
 
     <CheckBox
         android:id="@+id/checkBox1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="20dp"
+        android:layout_above="@+id/button1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="36dp"
         android:onClick="toggleCollection"
+        android:textColor="@android:color/white"
         android:text="@string/ENABLE_DATA_COL" />
 
     <Button
         android:id="@+id/button1"
-        android:layout_width="wrap_content"
+        style="@style/AppBaseTheme"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/checkBox1"
+        android:layout_above="@+id/button2"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="41dp"
+        android:layout_marginBottom="22dp"
         android:onClick="showData"
+        android:textColor="@android:color/white"
         android:text="@string/VIEW_COL_DATA" />
 
-    <Button
-        android:id="@+id/button2"
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="86dp"
+        android:text=""
+        android:textColor="@android:color/white"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView1"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:onClick="resetCount"
-        android:text="@string/RESET_COUNT" />
+        android:layout_marginBottom="40dp"
+        android:text="@string/COL_SINCE"
+        android:textColor="@android:color/white"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
 </RelativeLayout>
